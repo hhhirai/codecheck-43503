@@ -2,9 +2,25 @@ package codecheck;
 
 public class App {
 	public static void main(String[] args) {
+
 		for (int i = 0, l = args.length; i < l; i++) {
-			String output = String.format("argv[%s]: %s", i, args[i]);
-			System.out.println(output);
+			int input_int = Integer.parseInt(args[i]);
+			String input_str =  args[i];
+			int result = input_str.indexOf("3");
+
+			if (0 < input_int){
+				if (input_int <= 1000){
+					if(input_int % 3 ==0){
+						System.out.println("idiot");
+					}
+					else if(result != -1){
+						System.out.println("stupid");
+					}
+					System.out.println("dumb");
+				}
+				System.out.println("smart");
+			}
+			System.out.println("invalid");
 		}
 	}
 }
