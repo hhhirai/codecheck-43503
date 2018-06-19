@@ -20,9 +20,9 @@ public class App {
 					}
 					else{
 					System.out.println("smart");
-				}
-				System.out.println("invalid");
+					}
 			}
+			System.out.println("invalid");
 		}
 	}
 }
