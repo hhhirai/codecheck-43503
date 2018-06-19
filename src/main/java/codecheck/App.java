@@ -10,13 +10,15 @@ public class App {
 
 			if (0 < input_int){
 				if (input_int <= 1000){
-					if(input_int % 3 ==0){
+					if((input_int % 3 ==0) && (result != -1)){
+						System.out.println("dumb");
+					}
+					else if(input_int % 3 ==0){
 						System.out.println("idiot");
 					}
 					else if(result != -1){
 						System.out.println("stupid");
 					}
-					System.out.println("dumb");
 				}
 				System.out.println("smart");
 			}
