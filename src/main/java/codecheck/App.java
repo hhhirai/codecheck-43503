@@ -31,26 +31,27 @@ public class App {
 		int result = 0;
 	    try {
 	    	input_int = Integer.parseInt(input_str);
-	        } catch (NumberFormatException e) {
-	    		System.out.println("invalid");
-	        }
-    	result = input_str.indexOf("3");
+	    	result = input_str.indexOf("3");
 
-		if ((0 < input_int) && (input_int <= 1000)){
-				if((input_int % 3 ==0) && (result != -1)){
-					System.out.println("dumb");
-				}
-				else if(input_int % 3 ==0){
-					System.out.println("idiot");
-				}
-				else if(result != -1){
-					System.out.println("stupid");
-				}else{
-					System.out.println("smart");
-				}
-		}else{
-		System.out.println("invalid");
-		}
+			if ((0 < input_int) && (input_int <= 1000)){
+					if((input_int % 3 ==0) && (result != -1)){
+						System.out.println("dumb");
+					}
+					else if(input_int % 3 ==0){
+						System.out.println("idiot");
+					}
+					else if(result != -1){
+						System.out.println("stupid");
+					}else{
+						System.out.println("smart");
+					}
+			}else{
+			System.out.println("invalid");
+			}
+        } catch (NumberFormatException e) {
+    		System.out.println("invalid");
+        }
+
 	}
 
 
