@@ -26,8 +26,15 @@ public class App {
 	}
 
 	private static void output(String input_str) {
-		int input_int = Integer.parseInt(input_str);
-		int result = input_str.indexOf("3");
+
+		int input_int = 0;
+		int result = 0;
+	    try {
+	    	input_int = Integer.parseInt(input_str);
+	        } catch (NumberFormatException e) {
+	    		System.out.println("invalid");
+	        }
+    	result = input_str.indexOf("3");
 
 		if ((0 < input_int) && (input_int <= 1000)){
 				if((input_int % 3 ==0) && (result != -1)){
