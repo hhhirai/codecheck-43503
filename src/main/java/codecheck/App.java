@@ -17,8 +17,9 @@ public class App {
 					}
 					else if(result != -1){
 						System.out.println("stupid");
+					}else{
+						System.out.println("smart");
 					}
-				System.out.println("smart");
 			}else{
 			System.out.println("invalid");
 			}
