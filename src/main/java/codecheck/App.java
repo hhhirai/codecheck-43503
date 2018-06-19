@@ -1,25 +1,14 @@
 package codecheck;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 
 public class App {
 	public static void main(String[] args) {
 
 		for (int i = 0, l = args.length; i < l; i++) {
-			String input_str =  args[i];
-
-			if(input_str != null) {
-			    StringBuilder sb = new StringBuilder(input_str);
-			    for (int k = 0; k < sb.length(); i++) {
-			        int c = (int) sb.charAt(i);
-			        if (c >= 0xFF10 && c <= 0xFF19) {
-			            sb.setCharAt(i, (char) (c - 0xFEE0));
-			        }
-			    }
-			    input_str =sb.toString();
-			}
-
-			ArrayList input_list = new ArrayList();
+			String input_str =  Normalizer.normalize(args[i], Normalizer.Form.NFKC);
+						ArrayList input_list = new ArrayList();
 
 			if(input_str.indexOf("\\s+") != -1){
 				input_list.add(input_str.split(" ", 0));
@@ -64,8 +53,6 @@ public class App {
         }
 
 	}
-
-
 
 
 }
