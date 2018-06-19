@@ -1,21 +1,22 @@
 package codecheck;
 
 import java.text.Normalizer;
+import java.util.ArrayList;
 
 public class App {
 	public static void main(String[] args) {
 
 		for (int i = 0, l = args.length; i < l; i++) {
 			String input_str =  Normalizer.normalize(args[i], Normalizer.Form.NFKC);
-			String[] input_spr;
+						ArrayList input_list = new ArrayList();
 
 			if(input_str.indexOf("\\s+") != -1){
-				input_spr = input_str.split(" ", 0);
+				input_list.add(input_str.split(" ", 0));
 			}
 
-			if (input_spr.length > 0){
-				for (int j = 0; j < input_spr.length; j++) {
-					String input =  input_spr[j];
+			if (input_list.size() > 0){
+				for (int j = 0; j < input_list.size(); j++) {
+					String input =  (String) input_list.get(j);
 					output(input);
 				}
 			}else{
