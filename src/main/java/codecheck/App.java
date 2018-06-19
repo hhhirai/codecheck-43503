@@ -19,10 +19,10 @@ public class App {
 					else if(result != -1){
 						System.out.println("stupid");
 					}
+					System.out.println("smart");
 				}
-				System.out.println("smart");
+				System.out.println("invalid");
 			}
-			System.out.println("invalid");
 		}
 	}
 }
